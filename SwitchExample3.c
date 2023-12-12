@@ -3,23 +3,16 @@
 
 int main()
 {
-   char myOperator;
-   float number1,number2;
-   printf("Choose an operator(+,-,*,/):\n");
-   scanf("%c",&myOperator);
+    int number;
 
-   printf("Enter two numbers\n");
-   scanf("%f %f",&number1,&number2);
+   printf("Enter a number:\n");
+   scanf("%d",&number);
 
-   printf("\nOperator:%c\nNumber1:%f\nNumber2:%f\n",myOperator,number1,number2);
-
-   switch(myOperator)
+   switch(number%2)
    {
-   case '/':printf("%f",number1/number2);break;
-   case '*':printf("%f",number1*number2);break;
-   case '+':printf("%f",number1+number2);break;
-   case '-':printf("%f",number1-number2);break;
-   default:printf("You entered the wrong operator\n");
+   case 0:printf("%d is an even number\n");break;
+   case 1:printf("%d is an odd number\n");break;
+
    }
     return 0;
 }
